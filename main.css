@@ -88,6 +88,10 @@ p {
   padding: 50px;
 }
 
+.badges ul {
+  display: hide;
+}
+
 .badges li{
   padding: 20px 75px;
   display:inline;
@@ -132,7 +136,7 @@ p {
 
 .skills {
   width: 900px;
-  margin: 220px auto 100px auto;
+  margin: 20px auto 100px auto;
 }
 
 .skills ul {
@@ -166,6 +170,19 @@ p {
   float: left;
   margin: 0 175px;
 }
+
+button {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+  border-bottom: 1px solid #555555;
+  margin: 0 auto;
+  float: none;
+}
+
+
 
 
 
