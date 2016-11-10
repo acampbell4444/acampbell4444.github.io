@@ -184,13 +184,16 @@ button {
   outline: none;
 }
 
-.rotated {
-  transform: rotate(180deg);
-  -ms-transform: rotate(180deg); /* IE 9 */
-  -moz-transform: rotate(180deg); /* Firefox */
-  -webkit-transform: rotate(180deg); /* Safari and Chrome */
-  -o-transform: rotate(180deg); /* Opera */
+.rotated, .rotatedagain {
+  transform: rotate(360deg);
+  -ms-transform: rotate(360deg); /* IE 9 */
+  -moz-transform: rotate(360deg); /* Firefox */
+  -webkit-transform: rotate(360deg); /* Safari and Chrome */
+  -o-transform: rotate(360deg); /* Opera */
+  -webkit-transition: transform 2s ease-in-out;
 }
+
+
 
 
 

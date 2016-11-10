@@ -18,7 +18,7 @@ $(function(){
     }
   });
 
- $('.projects').find('img').hover(function(){
+ $('.projects').find('img').mouseenter(function(){
     $(this).addClass('rotated');});
  $('.projects').find('img').mouseleave(function(){
     $(this).removeClass('rotated');});
