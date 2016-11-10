@@ -1,5 +1,3 @@
-$(document).ready(function() {
-   $('h1').mouseenter.(function(){
-   	$(this).text('hey');
-   });
+$(document).ready(function(){
+  $('h1').text('hey');
 });
