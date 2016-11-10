@@ -8,18 +8,24 @@ $(function(){
  $('.badges').find('ul').hide();
  
  $('button').click(function(){                 //h1
-  	$(this).closest('.badges').find('ul').toggle();
+  	$(this).closest('.badges').find('ul').slideToggle();
   	if(butt === 'off') {
-      $('.butt').text('Click to See My Badges');
+      $('.butt').text('See Badges');
       butt = 'on';
     }else {
-       $('.butt').text('Hide My Badges');
+       $('.butt').text('Hide Badges');
       butt = 'off';
     }
-
   });
+
+ $('.projects').find('img').hover(function(){
+    $(this).addClass('rotated');});
+ $('.projects').find('img').mouseleave(function(){
+    $(this).removeClass('rotated');});
+
    
  
 });
 var butt = "on"
+//.addClass('.rotated');
 

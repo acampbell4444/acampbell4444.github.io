@@ -180,6 +180,16 @@ button {
   border-bottom: 1px solid #555555;
   margin: 0 auto;
   float: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -moz-transform: rotate(180deg); /* Firefox */
+  -webkit-transform: rotate(180deg); /* Safari and Chrome */
+  -o-transform: rotate(180deg); /* Opera */
 }
 
 
