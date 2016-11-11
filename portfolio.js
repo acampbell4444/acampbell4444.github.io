@@ -18,14 +18,19 @@ $(function(){
     }
   });
 
- $('.projects').find('img').mouseenter(function(){
+ $('.projects').find('img').hover(function(){
     $(this).addClass('rotated');});
  $('.projects').find('img').mouseleave(function(){
-    $(this).removeClass('rotated');});
-
-   
+    $(this).removeClass('rotated')                     ;});
+ 
+ 
+  $('.taco').change(function(){
+      $('body').css({'background-color':$("input[name=color]:checked").val() })      
+  });
  
 });
-var butt = "on"
-//.addClass('.rotated');
+var butt = "on";
+
+
+
 
