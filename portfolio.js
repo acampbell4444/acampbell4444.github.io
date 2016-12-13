@@ -1,3 +1,9 @@
+(function(){
+  angular
+    .module('portfolio',[]);
+})();
+
+
 $(function(){
   
   $('h1').hover(function(){                 //h1

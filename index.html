@@ -1,41 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang='en' ng-app='portfolio'>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<header>
-  <div class='row'>
-    <div class='col-xs-4' id='items'>
-      <a href='' id='items'>WORK</a>
+  <header>
+    <div ng-controller='navCtrl as nav'>
+      <div class='row'>
+        <div class='col-xs-4' id='items' ng-show="nav.DataFactory['tab']!=='name'">
+          <a href='' ng-click="nav.selectTab('name')" id='name'>ALAN J CAMPBELL</a>
+        </div>
+        <div class='col-xs-4' id='items'  ng-show="nav.DataFactory['tab']!=='work'">
+          <a href='' ng-click="nav.selectTab('work')" id='work'>WORK</a>
+        </div>
+        <div class='col-xs-4' id='items'  ng-show="nav.DataFactory['tab']!=='about'">
+          <a href='' id='about' ng-click="nav.selectTab('about')" >ABOUT</a>
+        </div>
+        <div class='col-xs-4' id='items'  ng-show="nav.DataFactory['tab']!=='contact'">
+          <a href='' ng-click="nav.selectTab('contact')" id='contact'>CONTACT</a>
+        </div>
+      </div>
     </div>
-    <div class='col-xs-4' id='items'>
-      <a href='' id='items'>ABOUT</a>
-    </div>
-     <div class='col-xs-4' id='items'>
-      <a href='' id='items'>CONTACT</a>
-    </div>
-  </div>
-</header>
+  </header>
+
   <div class='' id='app'>
-    <div class='row' id='name'>
-      <p class='name'>ALAN CAMPBELL</p>
+
+    <div ng-controller='nameCtrl as name' ng-show="name.DataFactory['tab']==='name'">
+
+      <div class='row ' id='name'>
+        <p class='name'>ALAN CAMPBELL</p>
+      </div>
+      <div class='row'>
+        <p class='dots'>. . .</p>
+      </div>
+      <div class='row' id='title'>
+        <p class='title'>FullStack Web Developer</p>
+      </div>
     </div>
-    <div class='row'>
-      <p class='dots'>. . .</p>
+
+     <div ng-controller='workCtrl as work' ng-show="work.DataFactory['tab']==='work'">
+      <div class='row' id='name'>
+        <p class='name'>Work Stuff</p>
+      </div>
     </div>
-    <div class='row' id='title'>
-      <p class='title'>FullStack Web Developer</p>
+    <div ng-controller='aboutCtrl as about' ng-show="about.DataFactory['tab']==='about'">
+      <div class='row' id='name'>
+        <p class='name'>About Stuff</p>
+      </div>
     </div>
+    <div ng-controller='contactCtrl as contact' ng-show="contact.DataFactory['tab']==='contact'">
+      <div class='row' id='name'>
+        <p class='name'>Contact Stuff</p>
+      </div>
+    </div>
+
+
   </div>
+  
+
   <footer>
     <div id='tree'>
       <span class='glyphicon glyphicon-tree-conifer'></span>
     </div>
   </footer>
 
- <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
- <script src="portfolio.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+  <script src="portfolio.js"></script>
+  <script src="controllers/work.js"></script>
+  <script src="controllers/navbar.js"></script>
+  <script src="controllers/name.js"></script>
+  <script src="controllers/about.js"></script>
+  <script src="controllers/contact.js"></script>
+  <script src="dataFactory.js"></script>
 </body>
 </html>
