@@ -38,7 +38,7 @@ footer {
 }
 .name {
   color: white;
-  font-size: 80px;
+  font-size: 90px;
   font-family: copperplate;
   text-align: center;
 }
@@ -72,11 +72,10 @@ footer {
    transform: scale(2) rotateY(180deg);
    transition: all 4s;
    transform: scale(2) rotateX(360deg);
-
 }
 
 #title {
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 #tree {
@@ -84,8 +83,7 @@ footer {
    text-align: center;
    font-size: 60px;
    position: relative;
-   bottom: 35px;
-  
+   bottom: 35px; 
 }
 
 .grow{
