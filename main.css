@@ -13,7 +13,7 @@ body {
 header {
   position: fixed;
   top:0;
-  height: 12%;
+  height: 10%;
   width: 100%;
   background-color: whitesmoke;
 }
@@ -44,7 +44,7 @@ footer {
 }
 
 #name {
-  margin-top: 17%;
+  margin-top: 12%;
 }
 
 #work {
@@ -68,6 +68,13 @@ footer {
   font-size: 30px;
 }
 
+.titleSwitch {
+   transform: scale(2) rotateY(180deg);
+   transition: all 4s;
+   transform: scale(2) rotateX(360deg);
+
+}
+
 #title {
   margin-top: 3%;
 }
@@ -78,4 +85,12 @@ footer {
    font-size: 60px;
    position: relative;
    bottom: 35px;
+  
+}
+
+.grow{
+   transform: scale(4);
+   top:-55px;
+   transition: all 3s;
+   color:darkgreen;
 }

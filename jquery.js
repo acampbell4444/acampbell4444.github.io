@@ -15,6 +15,12 @@ $(function(){
 	  	$('.dot3').css({ "color": "black" });
 	  	$('.dot2').css({ "color": "white" });
 	 });
+
+	  $('#title').on('mouseenter',function(){
+	 	$(this).addClass('titleSwitch')
+	 });
+
+	  
 	  $('.dots').on('mouseleave',function(){
 	 	$(this).css({'color':'white'})
 	  	$('.dot1').animate({ "left": "330px" }, "slow" );
@@ -22,8 +28,15 @@ $(function(){
 	  	$('.dot1').css({ "color": "white" });
 	  	$('.dot3').css({ "color": "white" });
 	  	$('.dot2').css({ "color": "black" });
-
 	 });
+
+	$('.glyphicon-tree-conifer').on('mouseenter',function(){
+		$(this).addClass('grow');
+	 });
+
+
+
+
  
  
 
