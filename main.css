@@ -31,7 +31,7 @@ footer {
   padding: 30px;
 }
 
-#work:hover, #about:hover, #contact:hover {
+#work:hover, #about:hover, #contact:hover, #nametab:hover {
   text-decoration: none;
   font-size:20px;
   color: coral;
@@ -44,7 +44,7 @@ footer {
 }
 
 #name {
-  margin-top: 20%;
+  margin-top: 17%;
 }
 
 #work {
@@ -52,9 +52,14 @@ footer {
 }
 
 .dots {
-  font-size: 40px;
+  font-size: 60px;
   color:white;
-  text-align: center
+  text-align: center;
+  position: relative;
+}
+
+.dot1, .dot3 {
+  position: relative;
 }
 
 .title {

@@ -9,7 +9,7 @@
     <div ng-controller='navCtrl as nav'>
       <div class='row'>
         <div class='col-xs-4' id='items' ng-show="nav.DataFactory['tab']!=='name'">
-          <a href='' ng-click="nav.selectTab('name')" id='name'>ALAN J CAMPBELL</a>
+          <a href='' ng-click="nav.selectTab('name')" id='nametab'>ALAN J CAMPBELL</a>
         </div>
         <div class='col-xs-4' id='items'  ng-show="nav.DataFactory['tab']!=='work'">
           <a href='' ng-click="nav.selectTab('work')" id='work'>WORK</a>
@@ -32,16 +32,16 @@
         <p class='name'>ALAN CAMPBELL</p>
       </div>
       <div class='row'>
-        <p class='dots'>. . .</p>
+        <p class='dots'><span class='dot1'>.</span>  <span class='dot2'>.</span> <span class='dot3'>.</span></p>
       </div>
       <div class='row' id='title'>
         <p class='title'>FullStack Web Developer</p>
       </div>
     </div>
 
-     <div ng-controller='workCtrl as work' ng-show="work.DataFactory['tab']==='work'">
-      <div class='row' id='name'>
-        <p class='name'>Work Stuff</p>
+     <div ng-controller='workCtrl as work' ng-show="work.DataFactory['tab']==='work'" >
+      <div class='row' id=''>
+        <p class=''>Work Stuff</p>
       </div>
     </div>
     <div ng-controller='aboutCtrl as about' ng-show="about.DataFactory['tab']==='about'">
@@ -64,9 +64,8 @@
       <span class='glyphicon glyphicon-tree-conifer'></span>
     </div>
   </footer>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
-  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
   <script src="portfolio.js"></script>
   <script src="controllers/work.js"></script>
   <script src="controllers/navbar.js"></script>
@@ -74,5 +73,6 @@
   <script src="controllers/about.js"></script>
   <script src="controllers/contact.js"></script>
   <script src="dataFactory.js"></script>
+  <script src="jquery.js"></script>
 </body>
 </html>
