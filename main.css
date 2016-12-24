@@ -36,15 +36,15 @@ footer {
   font-size:20px;
   color: coral;
 }
-.name {
+.head {
   color: white;
   font-size: 90px;
   font-family: copperplate;
   text-align: center;
 }
 
-#name {
-  margin-top: 12%;
+#head {
+  margin-top: 15%;
 }
 
 #work {
@@ -56,6 +56,7 @@ footer {
   color:white;
   text-align: center;
   position: relative;
+  margin: 30px 0 30px 0;
 }
 
 .dot1, .dot3 {
@@ -72,13 +73,22 @@ footer {
    transform: scale(2) rotateY(180deg);
    transition: all 4s;
    transform: scale(2) rotateX(360deg);
+   color:black;
 }
 
 #title {
   margin-top: 5%;
 }
 
+.shrink {
+   transform: scale(1);
+   top:0;
+   transition: all 3s;
+   color:white;
+}
+
 #tree {
+   transition: all 3s;
    color:white;
    text-align: center;
    font-size: 60px;
@@ -92,3 +102,10 @@ footer {
    transition: all 3s;
    color:darkgreen;
 }
+
+.headerGrow {
+  transform: scale(1.1);
+  transition: all 3s;
+  color: black;
+}
+

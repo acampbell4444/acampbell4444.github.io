@@ -6,7 +6,7 @@
 	function DataFactory(){
 
       var dataObj={};
-      dataObj['tab']='name'
+      dataObj['tab']='name';
       return dataObj;
   };
 

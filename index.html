@@ -26,10 +26,10 @@
 
   <div class='' id='app'>
 
-    <div ng-controller='nameCtrl as name' ng-show="name.DataFactory['tab']==='name'">
+    <div ng-controller='nameCtrl as name' ng-show="name.DataFactory['tab']==='name'" id='nameCont'>
 
-      <div class='row ' id='name'>
-        <p class='name'>ALAN CAMPBELL</p>
+      <div class='row ' id='head'>
+        <p class='head'>ALAN CAMPBELL</p>
       </div>
       <div class='row'>
         <p class='dots'><span class='dot1'>.</span>  <span class='dot2'>.</span> <span class='dot3'>.</span></p>
@@ -40,18 +40,18 @@
     </div>
 
      <div ng-controller='workCtrl as work' ng-show="work.DataFactory['tab']==='work'" >
-      <div class='row' id=''>
-        <p class=''>Work Stuff</p>
+      <div class='row' id='head'>
+        <p class='head'>Work Stuff</p>
       </div>
     </div>
     <div ng-controller='aboutCtrl as about' ng-show="about.DataFactory['tab']==='about'">
-      <div class='row' id='name'>
-        <p class='name'>About Stuff</p>
+      <div class='row' id='head'>
+        <p class='head'>About Stuff</p>
       </div>
     </div>
     <div ng-controller='contactCtrl as contact' ng-show="contact.DataFactory['tab']==='contact'">
-      <div class='row' id='name'>
-        <p class='name'>Contact Stuff</p>
+      <div class='row' id='head'>
+        <p class='head'>Contact Stuff</p>
       </div>
     </div>
 

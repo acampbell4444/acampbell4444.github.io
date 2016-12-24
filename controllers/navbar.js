@@ -4,8 +4,8 @@
         .module("portfolio")
         .controller("navCtrl", NavController);
 
-    
     NavController.$inject = ['DataFactory'];
+    
     function NavController(DataFactory){
       var vm = this;
       vm.DataFactory=DataFactory;
@@ -14,9 +14,9 @@
 
       function selectTab(name) {
       	DataFactory['tab']=name;
-      }
+      };
 
-    }
+    };
 
 
     
