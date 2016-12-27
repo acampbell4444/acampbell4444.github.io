@@ -11,9 +11,9 @@ body {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top:0;
-  height: 10%;
+  height: 85px;
   width: 100%;
   background-color: whitesmoke;
 }
@@ -21,7 +21,7 @@ header {
 footer {
   position: fixed;
   bottom:0;
-  height: 8%;
+  height: 70px;
   width: 100%;
   background-color: black;
 }
@@ -85,9 +85,9 @@ footer {
 
 .shrink {
    transform: scale(1);
-   top:-20px;
+   top:40px;
    transition: all 3s;
-   color:black;
+   color:white;
 }
 
 #tree {
@@ -113,8 +113,24 @@ footer {
   color: black;
 }
 
-.thumbnail {
+
+.workContainer {
+  position: relative;
+  top: 85px;
   text-align: center;
-  margin: 0 auto;
+  color: black;
+  font-size: 10px;
+  margin-bottom: 70px;
 }
+
+#box1, #box2, #box3,#box4,#box5,#box6,#box7,#box8,#box9 {
+  height: 210px;
+}
+
+#box1, #box3, #box5, #box7, #box9 {
+  background-color: coral;
+}
+
+
+
 

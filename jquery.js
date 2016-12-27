@@ -30,6 +30,14 @@ $(function(){
 		$('.title').removeClass('titleSwitch');
 	 });
 
+	$('#work').click(function(){
+		$('body').css({ "background-color": "white" });
+	});
+	
+	$('#nametab').click(function(){
+		$('body').css({ "background-color": "coral" });
+	});
+
 
 
  
