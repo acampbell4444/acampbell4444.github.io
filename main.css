@@ -44,7 +44,7 @@ footer {
 }
 
 #head {
-  margin-top: 15%;
+  margin-top: 8%;
 }
 
 #work {
@@ -102,7 +102,7 @@ footer {
 
 .grow{
    transform: scale(4);
-   top:-106px;
+   top:-111px;
    transition: all 3s;
    color:darkgreen;
 }
