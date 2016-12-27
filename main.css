@@ -78,6 +78,9 @@ footer {
 
 #title {
   margin-top: 5%;
+  position: relative;
+  text-align: center;
+  z-index: 1;
 }
 
 .shrink {
@@ -94,6 +97,7 @@ footer {
    font-size: 60px;
    position: relative;
    bottom: 35px; 
+   z-index: -1;
 }
 
 .grow{
@@ -107,5 +111,10 @@ footer {
   transform: scale(1.1);
   transition: all 3s;
   color: black;
+}
+
+.thumbnail {
+  text-align: center;
+  margin: 0 auto;
 }
 
