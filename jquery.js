@@ -31,7 +31,7 @@ $(function(){
 	 });
 
 	$('#work').click(function(){
-		$('body').css({ "background-color": "white" });
+		 $('body').css({ "background-color": "coral" });
 	});
 	
 	$('#nametab').click(function(){
@@ -41,62 +41,47 @@ $(function(){
 	var n=90;
 	var tankPosit = 0
 	$('#tankPic').click(function(){
-		console.log('hey')
+		$('.clickTank, .glyphicon-arrow-down').hide();
+		$('#tankPic').css({'margin-top':'60px'})
 		tankPosit++;
-		$(this).css( { 'transform': 'rotate('+n+'deg)', 'transition' : 'all 1s', 'animation-iteration-count':  'infinite'});
+		$(this).css( { 'transform': 'rotate('+n+'deg)', 'transition' : 'all 0.5s'});
 		n+=90;
+		
 		if(tankPosit%4===0){
 			$("html, body").animate({scrollTop: 0}, 500); 
 			$("html, body").animate({scrollLeft: 0}, 500); 
-			$('#box8').css({'background-color':'white'}); $('#box4').css({'background-color':'coral'})
-			$('#box8, #box9').text("");
-			$('#box1').text("Guessing Game Description");
-			$('#box4').text("Guessing Game project");
-			$('#box4').addClass('boxTitle');
-			$('#box7').text("Guessing Game Links");
+			$('#box8').css({'background-color':'white'}); $('#box4').css({'background-color':'coral'}).text("Bloccipedia").addClass('boxTitle');
+			$('#box8, #box9, #box7').text("");
+			$('#box1').text("Bloccipedia Description").addClass('boxDescrip');;
+			$('#box7').append("<a href='https://lit-cove-24467.herokuapp.com/' target='-blank'>Link To App</a>").removeClass('boxDescrip').addClass('boxLinks');
 		}
+
 		if(tankPosit%4===1){
 			$("html, body").animate({scrollTop: 0}, 500); 
-			$('#box4').css({'background-color':'white'});  $('#box2').css({'background-color':'coral'})
-			$('#box1').text("Turtle Description");
-			$('#box4, #box7').text("");
-			$('#box2').text("Turtle Quiz");
-			$('#box3').text("Turtle Game Links");
-			$('#box4').removeClass('boxTitle'); $('#box2').addClass('boxTitle'); 
+			$('#box4').css({'background-color':'white'}).removeClass('boxTitle');  $('#box2').css({'background-color':'coral'}).addClass('boxTitle')
+			$('#box1').text("Turtle Description").addClass('boxDescrip');
+			$('#box4, #box7').text("").removeClass('boxLinks');
+			$('#box2').append('<p>Turtle Quiz</p>');
+			$('#box3').append("<a href=' https://acampbell4444.github.io/ngQuiz/' target='-blank'>Link To App</a>").addClass('boxLinks');
 		}
+
 		if(tankPosit%4===2){
 			$("html, body").animate({scrollRight: 0}, 500); 
-			$('#box2').css({'background-color':'white'});  $('#box6').css({'background-color':'coral'})
-			$('#box1, #box2').text("");
-			$('#box3').text("3rd Project Description");
-			$('#box6').text("3rd Project Title");
-			$('#box9').text("3rd Project Links");
-			$('#box2').removeClass('boxTitle'); $('#box6').addClass('boxTitle'); 
+			$('#box9').append("<a href=' https://acampbell4444.github.io/GuessingGame/?#' target='-blank'>Link To App</a>").addClass('boxLinks');
+			$('#box2').css({'background-color':'white'}).removeClass('boxTitle').text("");  $('#box6').css({'background-color':'coral'}).text("Guessing Game").addClass('boxTitle');
+			$('#box3').text("Guessing Description").removeClass('boxLinks').addClass('boxDescrip');
+			$('#box1').removeClass('boxDescrip').text(""); 
 		}
+
 		if(tankPosit%4===3){
 			$("html, body").animate({scrollTop: $(document).height()}, 500); 
-			$('#box6').css({'background-color':'white'});  $('#box8').css({'background-color':'coral'})
-			$('#box3, #box6').text("");
-			$('#box7').text("4th project Description");
-			$('#box8').text("4th Project Title");
-			$('#box9').text("4th Project Links");
-			$('#box6').removeClass('boxTitle'); $('#box8').addClass('boxTitle'); 
+			$('#box6').css({'background-color':'white'}).removeClass('boxTitle').text('');  $('#box8').css({'background-color':'coral'}).text("Bloccipedia").addClass('boxTitle');
+			$('#box9').text("").append("<a href=' https://dry-reef-8694.herokuapp.com' target='-blank'>Link To App</a>");
+			$('#box7').text("Bloccit Description").addClass('boxDescrip');
+			$('#box3').text("").removeClass('boxDescrip');
 		}
 	});
 	
-	$('#tankPic').mouseenter(function(){
-			$("html, body").animate({scrollLeft: 0}, 500); 
-			if(tankPosit===0){ $('#box4').css({'background-color':'coral'})
-			$('#box1').text("Guessing Game Description");
-			$('#box4').text("Guessing Game project");
-			$('#box7').text("Guessing Game Links");
-			$('#box8').removeClass('boxTitle'); $('#box4').addClass('boxTitle'); 
-	}
-	});
 
-
-
- 
- 
 
  });

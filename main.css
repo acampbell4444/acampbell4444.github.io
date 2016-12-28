@@ -6,6 +6,10 @@ html,body,h1,h2,h3,h4,p,div,ul,li,ol {
   font-size:100%;
 }
 
+a, a:hover {
+  text-decoration: none;
+}
+
 body {
   background-color: coral;
 }
@@ -13,7 +17,7 @@ body {
 header {
   position: fixed;
   top:0;
-  height: 85px;
+  height: 60px;
   width: 100%;
   background-color: whitesmoke;
   z-index: 1;
@@ -118,28 +122,38 @@ footer {
 
 .workContainer {
   position: relative;
-  top: 85px;
   text-align: center;
   color: black;
   font-size: 10px;
   height: 100%;
-  margin: 0 auto 50px auto;
+  margin: 60px auto  auto;
   z-index: 0;
 }
 
-#box1, #box2, #box3,#box4,#box5,#box6,#box7,#box8,#box9 {
-  height: 225px;
+#box1, #box2, #box3,#box7,#box8,#box9 {
+  height: 250px;
+  overflow: hidden;
+}
+
+#box4,#box5,#box6 {
+  height: 200px;
+  overflow:hidden;
+   padding: 0;
+  margin:0;
 }
 
 #box1, #box3, #box7, #box9 {
   background-color: coral;
+}
+#box2, #box4, #box5, #box6, #box8 {
+  background-color: white;
 }
 
 #tankPic {
   height: 70px;
   width: 140px;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 10px;
 
 }
 
@@ -151,8 +165,34 @@ footer {
 .boxTitle {
   font-size: 30px;
   padding-top: 60px;
+  color:white;
 }
 
+.boxDescrip {
+  font-size: 30px;
+  padding-top: 60px;
+  color: white;
+}
+
+.boxLinks {
+  font-size: 30px;
+  padding-top: 60px;
+  color:red;
+  text-decoration: none;
+}
+
+
+.clickTank {
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+.glyphicon-arrow-down {
+  font-size:20px;
+}
+
+
+ 
 
 
 
