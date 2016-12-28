@@ -7,11 +7,10 @@
 
     function WorkController(DataFactory){
         var vm = this;
+     
         vm.DataFactory=DataFactory;
+     };
 
-      
-
-    }
 
 
     
