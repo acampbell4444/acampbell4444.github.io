@@ -130,23 +130,34 @@ footer {
   z-index: 0;
 }
 
-#box1, #box2, #box3,#box7,#box8,#box9 {
+#box1, #box2, #box3{
   height: 250px;
+  overflow: hidden;
+}
+
+#box7,#box8,#box9 {
+  height: 320px;
   overflow: hidden;
 }
 
 #box4,#box5,#box6 {
   height: 200px;
   overflow:hidden;
-   padding: 0;
+  padding: 0;
   margin:0;
 }
 
 #box1, #box3, #box7, #box9 {
   background-color: coral;
 }
-#box2, #box4, #box5, #box6, #box8 {
+#box2, #box4, #box6, #box8 {
+  background-color: grey;
+}
+
+#box5 {
   background-color: white;
+  border-radius: 50%;
+  border: 5px solid grey;
 }
 
 #tankPic {
@@ -181,16 +192,46 @@ footer {
   text-decoration: none;
 }
 
-
-.clickTank {
-  font-size: 15px;
-  margin-top: 30px;
-}
-
 .glyphicon-arrow-down {
   font-size:20px;
 }
 
+#r2{
+  background-color: grey;
+}
+
+#tankPic{
+  margin-top: 60px;
+}
+
+#tankPic:hover{
+  cursor:pointer;
+}
+
+.shake{
+  animation: shake 3s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
  
 

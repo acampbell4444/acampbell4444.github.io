@@ -31,7 +31,9 @@ $(function(){
 	 });
 
 	$('#work').click(function(){
-		 $('body').css({ "background-color": "coral" });
+		 $('body').css({ "background-color": "black" });
+		 $('#tankPic').addClass('shake')
+
 	});
 	
 	$('#nametab').click(function(){
@@ -41,8 +43,6 @@ $(function(){
 	var n=90;
 	var tankPosit = 0
 	$('#tankPic').click(function(){
-		$('.clickTank, .glyphicon-arrow-down').hide();
-		$('#tankPic').css({'margin-top':'60px'})
 		tankPosit++;
 		$(this).css( { 'transform': 'rotate('+n+'deg)', 'transition' : 'all 0.5s'});
 		n+=90;
@@ -50,7 +50,7 @@ $(function(){
 		if(tankPosit%4===0){
 			$("html, body").animate({scrollTop: 0}, 500); 
 			$("html, body").animate({scrollLeft: 0}, 500); 
-			$('#box8').css({'background-color':'white'}); $('#box4').css({'background-color':'coral'}).text("Bloccipedia").addClass('boxTitle');
+			$('#box8').css({'background-color':'grey'}); $('#box4').css({'background-color':'coral'}).text("Bloccipedia").addClass('boxTitle');
 			$('#box8, #box9, #box7').text("");
 			$('#box1').text("Bloccipedia Description").addClass('boxDescrip');;
 			$('#box7').append("<a href='https://lit-cove-24467.herokuapp.com/' target='-blank'>Link To App</a>").removeClass('boxDescrip').addClass('boxLinks');
@@ -58,7 +58,7 @@ $(function(){
 
 		if(tankPosit%4===1){
 			$("html, body").animate({scrollTop: 0}, 500); 
-			$('#box4').css({'background-color':'white'}).removeClass('boxTitle');  $('#box2').css({'background-color':'coral'}).addClass('boxTitle')
+			$('#box4').css({'background-color':'grey'}).removeClass('boxTitle');  $('#box2').css({'background-color':'coral'}).addClass('boxTitle')
 			$('#box1').text("Turtle Description").addClass('boxDescrip');
 			$('#box4, #box7').text("").removeClass('boxLinks');
 			$('#box2').append('<p>Turtle Quiz</p>');
@@ -68,14 +68,14 @@ $(function(){
 		if(tankPosit%4===2){
 			$("html, body").animate({scrollRight: 0}, 500); 
 			$('#box9').append("<a href=' https://acampbell4444.github.io/GuessingGame/?#' target='-blank'>Link To App</a>").addClass('boxLinks');
-			$('#box2').css({'background-color':'white'}).removeClass('boxTitle').text("");  $('#box6').css({'background-color':'coral'}).text("Guessing Game").addClass('boxTitle');
+			$('#box2').css({'background-color':'grey'}).removeClass('boxTitle').text("");  $('#box6').css({'background-color':'coral'}).text("Guessing Game").addClass('boxTitle');
 			$('#box3').text("Guessing Description").removeClass('boxLinks').addClass('boxDescrip');
 			$('#box1').removeClass('boxDescrip').text(""); 
 		}
 
 		if(tankPosit%4===3){
 			$("html, body").animate({scrollTop: $(document).height()}, 500); 
-			$('#box6').css({'background-color':'white'}).removeClass('boxTitle').text('');  $('#box8').css({'background-color':'coral'}).text("Bloccipedia").addClass('boxTitle');
+			$('#box6').css({'background-color':'grey'}).removeClass('boxTitle').text('');  $('#box8').css({'background-color':'coral'}).text("Bloccipedia").addClass('boxTitle');
 			$('#box9').text("").append("<a href=' https://dry-reef-8694.herokuapp.com' target='-blank'>Link To App</a>");
 			$('#box7').text("Bloccit Description").addClass('boxDescrip');
 			$('#box3').text("").removeClass('boxDescrip');
