@@ -151,13 +151,13 @@ footer {
   background-color: coral;
 }
 #box2, #box4, #box6, #box8 {
-  background-color: grey;
+  background-color: blue;
 }
 
 #box5 {
   background-color: white;
   border-radius: 50%;
-  border: 5px solid grey;
+  border: 5px solid blue;
 }
 
 #tankPic {
@@ -197,7 +197,7 @@ footer {
 }
 
 #r2{
-  background-color: grey;
+  background-color: blue;
 }
 
 #tankPic{
@@ -209,7 +209,7 @@ footer {
 }
 
 .shake{
-  animation: shake 3s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
