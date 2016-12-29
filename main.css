@@ -136,12 +136,12 @@ footer {
 }
 
 #box7,#box8,#box9 {
-  height: 320px;
+  height: 250px;
   overflow: hidden;
 }
 
 #box4,#box5,#box6 {
-  height: 200px;
+  height: 250px;
   overflow:hidden;
   padding: 0;
   margin:0;
@@ -150,7 +150,11 @@ footer {
 #box1, #box3, #box7, #box9 {
   background-color: black;
 }
-#box2, #box4, #box6, #box8 {
+
+#box2 {
+  background-color: black
+}
+#box4, #box6, #box8 {
   background-color: black;
 }
 
@@ -228,6 +232,51 @@ footer {
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+
+.box b {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #66ff33;
+  box-shadow: inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04);
+  position: absolute;
+  -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  -moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  -o-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+}
+
+@-webkit-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 100px) }
+}
+@-moz-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 100px) }
+}
+@-o-keyframes moveX {
+  from { left: 0; } to { left: calc(100% - 100px) }
+}
+@keyframes moveX {
+   from { left: 0; } to { left: calc(100% - 100px) }
+}
+@-webkit-keyframes moveY {
+  from { top: 0; } to { top: 150px; }
+}
+@-moz-keyframes moveY {
+  from { top: 0; } to { top: 150px; }
+}
+@-o-keyframes moveY {
+  from { top: 0; } to { top: 150px; }
+}
+@keyframes moveY {
+  from { top: 0; } to { top: 150px; }
+}
+
+#ballText {
+  padding-top: 30px;
+  color:black;
+  font-size:16px;
 }
 
  

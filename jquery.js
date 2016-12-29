@@ -5,7 +5,8 @@ $(function(){
 	 });
 
 	 $('#nametab').click(function(){
-	 	 $('footer').css({'background-color':'#66ff33'})
+	 	$('body').css({ "background-color": "coral" });
+	 	 $('footer').css({'background-color':'black'})
 	 });
 
 	 $('.dots').on('mouseenter',function(){
@@ -33,24 +34,23 @@ $(function(){
 		$('.head').removeClass('headerGrow');
 		$('.title').removeClass('titleSwitch');
 	 });
-
+	var shake=0
+	var n=90, tankPosit = 1, firstClick=0;
 	$('#work').click(function(){
+		 $('#ball1, #ball2, #ball3, #ball0').hide()
 		 $('body').css({ "background-color": "black" });
-		 $('#tankPic').addClass('shake')
 		 $('footer').css({'background-color':'#66ff33'})
-
-	});
-	
-	$('#nametab').click(function(){
-		$('body').css({ "background-color": "coral" });
+		 shake++ < 1 ?  $('#tankPic').addClass('shake') : $('#tankPic').removeClass('shake');
+		 firstClick > 0 ? tankPosit%4===0 ? $('#ball0').show() : tankPosit%4===1 ? $('#ball1').show() :
+		 	tankPosit%4===2 ? $('#ball2').show() : tankPosit%4===3 ? $('#ball3').show() : null : null
 	});
 
-	var n=90;
-	var tankPosit = 1
 	$('#tankPic').click(function(){
-		tankPosit++;
-		$(this).css( { 'transform': 'rotate('+n+'deg)', 'transition' : 'all 0.5s'});
-		n+=90;
+		if(firstClick++ > 0 ) {
+			tankPosit++;
+			$(this).css( { 'transform': 'rotate('+n+'deg)', 'transition' : 'all 0.5s'}) 
+			n+=90
+		}
 		
 		if(tankPosit%4===0){
 			$("html, body").animate({scrollTop: 0}, 500); 
@@ -62,18 +62,19 @@ $(function(){
 		}
 
 		if(tankPosit%4===1){
-			$("html, body").animate({scrollTop: 0}, 500); 
-			$('#box4').css({'background-color':'black'}).removeClass('boxTitle');  $('#box2').css({'background-color':'black'}).addClass('boxTitle')
+			$("html, body").animate({scrollTop: 0}, 500);
+			$('#ball1').show();
+			$('#box4').css({'background-color':'black'}).removeClass('boxTitle');
 			$('#box1').text("Turtle Description").addClass('boxDescrip');
 			$('#box4, #box7').text("").removeClass('boxLinks');
-			$('#box2').append('<p>Turtle Quiz</p>');
 			$('#box3').append("<a href=' https://acampbell4444.github.io/ngQuiz/' target='-blank'>Link To App</a>").addClass('boxLinks');
 		}
 
 		if(tankPosit%4===2){
 			$("html, body").animate({scrollRight: 0}, 500); 
+			$('#ball1').hide();
+			$('#ball2').show();
 			$('#box9').append("<a href=' https://acampbell4444.github.io/GuessingGame/?#' target='-blank'>Link To App</a>").addClass('boxLinks');
-			$('#box2').css({'background-color':'black'}).removeClass('boxTitle').text("");  $('#box6').css({'background-color':'black'}).text("Guessing Game").addClass('boxTitle');
 			$('#box3').text("Guessing Description").removeClass('boxLinks').addClass('boxDescrip');
 			$('#box1').removeClass('boxDescrip').text(""); 
 		}
