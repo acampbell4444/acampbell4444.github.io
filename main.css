@@ -123,7 +123,7 @@ footer {
 .workContainer {
   position: relative;
   text-align: center;
-  color: black;
+  color: #d5ff80;
   font-size: 10px;
   height: 100%;
   margin: 60px auto  auto;
@@ -148,23 +148,20 @@ footer {
 }
 
 #box1, #box3, #box7, #box9 {
-  background-color: coral;
+  background-color: black;
 }
 #box2, #box4, #box6, #box8 {
-  background-color: blue;
+  background-color: black;
 }
 
 #box5 {
-  background-color: white;
-  border-radius: 50%;
-  border: 5px solid blue;
+  background-color: black;
 }
 
 #tankPic {
-  height: 70px;
-  width: 140px;
+  height: 60px;
+  width: 52px;
   margin: 0 auto;
-  margin-top: 10px;
 
 }
 
@@ -197,7 +194,7 @@ footer {
 }
 
 #r2{
-  background-color: blue;
+  background-color: #d5ff80;
 }
 
 #tankPic{
