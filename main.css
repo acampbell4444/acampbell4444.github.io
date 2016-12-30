@@ -11,7 +11,7 @@ a, a:hover {
 }
 
 body {
-  background-color: coral;
+  background-color: black;
 }
 
 header {
@@ -79,7 +79,7 @@ footer {
    transform: scale(2) rotateY(180deg);
    transition: all 4s;
    transform: scale(2) rotateX(360deg);
-   color:black;
+   color:#66ff33;
 }
 
 #title {
@@ -110,13 +110,13 @@ footer {
    transform: scale(4);
    top:-111px;
    transition: all 3s;
-   color:darkgreen;
+   color:#66ff33;
 }
 
 .headerGrow {
   transform: scale(1.1);
   transition: all 3s;
-  color: black;
+  color: #66ff33;
 }
 
 
@@ -136,8 +136,7 @@ footer {
 }
 
 #box7,#box8,#box9 {
-  height: 250px;
-  overflow: hidden;
+  height: 320px;
 }
 
 #box4,#box5,#box6 {
@@ -147,18 +146,7 @@ footer {
   margin:0;
 }
 
-#box1, #box3, #box7, #box9 {
-  background-color: black;
-}
-
-#box2 {
-  background-color: black
-}
-#box4, #box6, #box8 {
-  background-color: black;
-}
-
-#box5 {
+#box1,#box2, #box3,#box4,#box5, #box6, #box7,  #box8, #box9 {
   background-color: black;
 }
 
@@ -197,12 +185,10 @@ footer {
   font-size:20px;
 }
 
-#r2{
-  background-color: #d5ff80;
-}
-
 #tankPic{
   margin-top: 60px;
+  position:relative;
+  bottom: 140px;
 }
 
 #tankPic:hover{
@@ -249,16 +235,16 @@ footer {
 }
 
 @-webkit-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 100px) }
+  from { left: 0; } to { left: calc(100% - 120px) }
 }
 @-moz-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 100px) }
+  from { left: 0; } to { left: calc(100% - 120px) }
 }
 @-o-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 100px) }
+  from { left: 0; } to { left: calc(100% - 120px) }
 }
 @keyframes moveX {
-   from { left: 0; } to { left: calc(100% - 100px) }
+   from { left: 0; } to { left: calc(100% - 120px) }
 }
 @-webkit-keyframes moveY {
   from { top: 0; } to { top: 150px; }
@@ -277,6 +263,14 @@ footer {
   padding-top: 30px;
   color:black;
   font-size:16px;
+}
+
+.arrowBorder {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  border: 3px solid #66ff33;
+  margin: 0 auto;
 }
 
  
