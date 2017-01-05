@@ -2,6 +2,7 @@ $(function(){
   //name page
 	 $('.head').on('mouseenter',function(){
 	 	$(this).addClass('headerGrow')
+	 	$('#work, #about, #contact, #nametab').css( {'color' : '#66ff33' } )
 	 });
 
 	 $('#nametab').click(function(){
@@ -34,57 +35,53 @@ $(function(){
 		$('.title').removeClass('titleSwitch');
 	 });
 	var shake=0
-	var n=90, tankPosit = 1, firstClick=0;
+	var n=90, arrowPosit = 1, firstClick=0;
 	$('#work').click(function(){
 		 $('#ball1, #ball2, #ball3, #ball0').hide()
 		 $('body').css({ "background-color": "black" });
 		 $('footer').css({'background-color':'#66ff33'})
-		 shake++ < 1 ?  $('#tankPic').addClass('shake') : $('#tankPic').removeClass('shake');
-		 firstClick > 0 ? tankPosit%4===0 ? $('#ball0').show() : tankPosit%4===1 ? $('#ball1').show() :
-		 	tankPosit%4===2 ? $('#ball2').show() : tankPosit%4===3 ? $('#ball3').show() : null : null
+		 shake++ < 1 ?  $('#arrowPic').addClass('shake') : $('#arrowPic').removeClass('shake');
+		 firstClick > 0 ? arrowPosit%4===0 ? $('#ball0').show() : arrowPosit%4===1 ? $('#ball1').show() :
+		 	arrowPosit%4===2 ? $('#ball2').show() : arrowPosit%4===3 ? $('#ball3').show() : null : null
 	});
 
-	$('#tankPic').click(function(){
+	$('#arrowPic').click(function(){
 		if(firstClick++ > 0 ) {
-			tankPosit++;
+			arrowPosit++;
 			$(this).css( { 'transform': 'rotate('+n+'deg)', 'transition' : 'all 0.5s'}) 
 			n+=90
 		}
 		
-		if(tankPosit%4===0){
-			$('#box7').text("");
-			$("html, body").animate({scrollLeft: 0}, 500);
-			$('#ball3').hide();
-		    $('#ball0').show();
-			$('#box1').text("Bloccipedia Description").addClass('boxDescrip');;
-			$('#box7').append("<a href='https://lit-cove-24467.herokuapp.com/' target='-blank'>Link To App</a>").removeClass('boxDescrip').addClass('boxLinks');
+		if(arrowPosit%4===0){
+			$("html, body").animate({scrollLeft: 0}, 500).animate({scrollTop: 0}, 500)
+			$('#box7, #box9').text("");
+			$('#ball3').hide();$('#ball0').show();
+			$('#box1').text('').append("<p class='well descrips'>I constructed this app using Angular and Bootstrap. Key features include a dynamic search form and pop-up modals.</p>")
+			$('#box7').append("<a href='https://github.com/acampbell4444/bloccit' target='-blank'><img class='git' src='https://www.enterprisemodules.com/images/github-icon.png'></img></a>");
 		}
 
-		if(tankPosit%4===1){
+		if(arrowPosit%4===1){
 			$("html, body").animate({scrollTop: 0}, 500);
-			$('#ball0').hide();
-			$('#ball1').show();
-			$('#box1').text("Turtle Description").addClass('boxDescrip');
+			$('#ball0').hide();$('#ball1').show();
+			$('#box1').text('').append("<p class='well descrips'>I constructed this app using Angular and Bootstrap. Key features include a dynamic search form and pop-up modals.</p>")
 			$('#box7').text("").removeClass('boxLinks');
-			$('#box3').append("<a href=' https://acampbell4444.github.io/ngQuiz/' target='-blank'>Link To App</a>").addClass('boxLinks');
+			$('#box3').append("<a href='https://github.com/acampbell4444/ngQuiz' target='-blank'><img class='git' src='https://www.enterprisemodules.com/images/github-icon.png'></img></a>");
 		}
 
-		if(tankPosit%4===2){
+		if(arrowPosit%4===2){
 			$("html, body").animate({scrollRight: 0}, 500); 
-			$('#ball1').hide();
-			$('#ball2').show();
-			$('#box9').append("<a href=' https://acampbell4444.github.io/GuessingGame/?#' target='-blank'>Link To App</a>").addClass('boxLinks');
-			$('#box3').text("Guessing Description").removeClass('boxLinks').addClass('boxDescrip');
-			$('#box1').removeClass('boxDescrip').text(""); 
+			$('#ball1').hide();$('#ball2').show();
+			$('#box9').append("<a href='https://github.com/acampbell4444/GuessingGame' target='-blank'><img class='git' src='https://www.enterprisemodules.com/images/github-icon.png'></img></a>");
+			$('#box3').text('').append("<p class='well descrips'>I constructed this app using Angular and Bootstrap. Key features include a dynamic search form and pop-up modals.</p>")
+			$('#box1').text(""); 
 		}
 
-		if(tankPosit%4===3){
+		if(arrowPosit%4===3){
 			console.log('hey')
 			$("html, body").animate({scrollTop: $(document).height()}, 500);
-			$('#ball2').hide();
-			$('#ball3').show();
-			$('#box9').text("").append("<a href=' https://dry-reef-8694.herokuapp.com' target='-blank'>Link To App</a>");
-			$('#box7').text("Bloccit Description").addClass('boxDescrip');
+			$('#ball2').hide();$('#ball3').show();
+			$('#box9').text("").append("<a href='https://github.com/acampbell4444/blocipedia' target='-blank'><img class='git' src='https://www.enterprisemodules.com/images/github-icon.png'></img></a>");
+			$('#box7').append("<p class='well descrips'>I constructed this app using Angular and Bootstrap. Key features include a dynamic search form and pop-up modals.</p>");
 			$('#box3').text("").removeClass('boxDescrip');
 		}
 	});

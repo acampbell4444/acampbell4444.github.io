@@ -19,7 +19,7 @@ header {
   top:0;
   height: 60px;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: #1C263C;
   z-index: 1;
 }
 
@@ -36,10 +36,14 @@ footer {
   padding: 30px;
 }
 
+#work, #about, #contact, #nametab {
+  color: white;
+}
+
 #work:hover, #about:hover, #contact:hover, #nametab:hover {
   text-decoration: none;
   font-size:20px;
-  color: coral;
+  color: #66ff33;
 }
 .head {
   color: white;
@@ -50,7 +54,7 @@ footer {
 }
 
 #head {
-  margin-top: 8%;
+  margin-top: 12%;
 }
 
 #work {
@@ -107,7 +111,7 @@ footer {
 }
 
 .grow{
-   transform: scale(4);
+   transform: scale(2);
    top:-111px;
    transition: all 3s;
    color:#66ff33;
@@ -146,18 +150,20 @@ footer {
   margin:0;
 }
 
-#box1,#box2, #box3,#box4,#box5, #box6, #box7,  #box8, #box9 {
-  background-color: black;
-}
-
-#tankPic {
+#arrowPic {
   height: 60px;
   width: 52px;
   margin: 0 auto;
-
+  margin-top: 60px;
+  position:relative;
+  bottom: 140px;
 }
 
-.tankRotate {
+#arrowPic:hover{
+  cursor:pointer;
+}
+
+.arrowRotate {
   transform: rotate(90deg);
   transition: all 1s;
 }
@@ -168,31 +174,8 @@ footer {
   color:white;
 }
 
-.boxDescrip {
-  font-size: 30px;
-  padding-top: 60px;
-  color: white;
-}
-
-.boxLinks {
-  font-size: 30px;
-  padding-top: 60px;
-  color:red;
-  text-decoration: none;
-}
-
 .glyphicon-arrow-down {
   font-size:20px;
-}
-
-#tankPic{
-  margin-top: 60px;
-  position:relative;
-  bottom: 140px;
-}
-
-#tankPic:hover{
-  cursor:pointer;
 }
 
 .shake{
@@ -235,16 +218,16 @@ footer {
 }
 
 @-webkit-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 120px) }
+  from { left: 0; } to { left: calc(100% - 100px) }
 }
 @-moz-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 120px) }
+  from { left: 0; } to { left: calc(100% - 100px) }
 }
 @-o-keyframes moveX {
-  from { left: 0; } to { left: calc(100% - 120px) }
+  from { left: 0; } to { left: calc(100% - 100px) }
 }
 @keyframes moveX {
-   from { left: 0; } to { left: calc(100% - 120px) }
+   from { left: 0; } to { left: calc(100% - 100px) }
 }
 @-webkit-keyframes moveY {
   from { top: 0; } to { top: 150px; }
@@ -273,6 +256,20 @@ footer {
   margin: 0 auto;
 }
 
+.descrips {
+  color: #faebd7;
+  margin: 0 auto;
+  font-size: 14px;
+  width: 300px;
+  font-style:  'Helvetica Neue';
+  background-color: #1C263C;
+  margin-top: 40px; 
+}
+
+.git {
+  height: 100px;
+  margin-top: 40px; 
+}
  
 
 
